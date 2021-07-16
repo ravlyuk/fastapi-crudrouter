@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 
 class CategoryBase(BaseModel):
-    name: str = 'Cat'
+    name: str
 
 
 class CategoryOut(CategoryBase):
