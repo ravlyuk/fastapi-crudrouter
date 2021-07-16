@@ -4,6 +4,8 @@ from fastapi_crudrouter import OrmarCRUDRouter
 
 from . import models, schemas
 
+# POST
+
 post_router = OrmarCRUDRouter(
     schema=models.Post,
     create_schema=schemas.PostBase,
@@ -14,6 +16,8 @@ post_router = OrmarCRUDRouter(
 async def get_all():
     return await models.Post.objects.all()
 
+
+# CATEGORY
 
 category_router = OrmarCRUDRouter(
     schema=models.Category,
@@ -26,6 +30,8 @@ category_router = OrmarCRUDRouter(
 async def get_all():
     return await models.Category.objects.all()
 
+
+# COMMENT
 
 comment_router = OrmarCRUDRouter(
     schema=models.Comment,
